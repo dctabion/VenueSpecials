@@ -2,6 +2,8 @@
 var mongoose = require('mongoose');
 
 console.log('process.env.DATABASE_URL:', process.env.DATABASE_URL);
+console.log('process.env.MONGOLAB_URI:', process.env.MONGOLAB_URI);
+
 var connectionString = process.env.DATABASE_URL || process.env.MONGOLAB_URI;
 
 mongoose.connect(connectionString);
